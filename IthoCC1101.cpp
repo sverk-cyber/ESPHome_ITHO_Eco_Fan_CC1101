@@ -286,7 +286,7 @@ void IthoCC1101::initReceive()
 	writeRegister(CC1101_IOCFG2 ,0x00);			//Assert when RX FIFO is filled or above the RX FIFO threshold. Deassert when (0x00): RX FIFO is drained below threshold, or (0x01): deassert when RX FIFO is empty.
 	writeRegister(CC1101_FSCTRL1 ,0x06);
 	writeRegister(CC1101_FSCTRL0 ,0x00);
-	writeRegister(CC1101_MDMCFG4 ,0x5A);                    // For newer models 0xE8 (> 2011))
+	writeRegister(CC1101_MDMCFG4 ,0xE8);                    // For newer models 0xE8 (> 2011))
 	writeRegister(CC1101_MDMCFG3 ,0x83);                    // For newer models 0x43 (> 2011))
 	writeRegister(CC1101_MDMCFG2 ,0x00);		//Enable digital DC blocking filter before demodulator, 2-FSK, Disable Manchester encoding/decoding, No preamble/sync
 	writeRegister(CC1101_MDMCFG1 ,0x22);		//Disable FEC
